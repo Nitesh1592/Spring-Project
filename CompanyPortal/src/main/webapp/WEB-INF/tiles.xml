@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ <!DOCTYPE tiles-definitions PUBLIC 
+ "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+ " http://tiles.apache.org/dtds/tiles-config_3_0.dtd"> 
+ 
+ 
+
+<tiles-definitions>  
+  
+  <!-- Login Page -->
+   <definition name="login" template="/WEB-INF/company/login.jsp">
+       <put-attribute name="title" value="Employee Login" />
+       <put-attribute name="application-name" value="Employee Portal"></put-attribute>
+   </definition>
+   
+   
+   <!-- Base Definition -->
+   <definition name="basedefinition" template="/WEB-INF/layout/layout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />  
+   </definition>  
+   
+   <!-- Employee List Page -->
+   <definition name="emp_list" extends="basedefinition">  
+       <put-attribute name="title" value="Employee List | Admin" />
+       <put-attribute name="body" value="/WEB-INF/company/Employee/emp_list.jsp" />
+   </definition>
+   
+   <definition name="dashboard" extends="basedefinition">
+   		<put-attribute name="title" value="profile" />
+   		<put-attribute name="body" value="/WEB-INF/company/Employee/dashboard.jsp" />
+   </definition>
+</tiles-definitions>
